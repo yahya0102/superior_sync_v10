@@ -1,0 +1,8 @@
+fastapi>=0.110
+uvicorn>=0.27
+python-multipart>=0.0.9   # required by FastAPI for file uploads
+pydantic>=2.5
+cryptography>=42          # transport/file/credential encryption (strongly recommended)
+watchfiles>=0.21          # native file watching (falls back to polling)
+psutil>=5.9               # system metrics
+# tests:  pip install httpx   (enables the HTTP end-to-end tests)

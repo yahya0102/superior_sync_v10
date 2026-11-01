@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "superior-sync"
+# Single source of truth: the version lives in superior_sync/__init__.py.
+dynamic = ["version"]
+description = "Peer-to-peer file synchronisation with a web UI"
+requires-python = ">=3.10"
+dependencies = ["fastapi>=0.110", "uvicorn>=0.27", "python-multipart>=0.0.9", "pydantic>=2.5"]
+
+[project.optional-dependencies]
+full = ["cryptography>=42", "watchfiles>=0.21", "psutil>=5.9"]
+test = ["httpx>=0.27"]
+
+[project.scripts]
+superior-sync = "superior_sync.main:main"
+
+[tool.setuptools]
+packages = ["superior_sync", "superior_sync.routers", "superior_sync.integrations"]
+
+[tool.setuptools.package-data]
+superior_sync = ["ui_bundle.html"]
+
+[tool.setuptools.dynamic]
+version = {attr = "superior_sync.__version__"}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b0f17">
+<title>Superior Sync</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233b82f6'/%3E%3Cpath d='M10 16a6 6 0 0 1 6-6h2M22 16a6 6 0 0 1-6 6h-2' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<!--SS_STYLES-->
+</head>
+<body>
+<a href="#main" class="skip-link" id="skipLink">Skip to content</a>
+
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 12a6 6 0 0 1 6-6h2"/>
+          <path d="M18 12a6 6 0 0 1-6 6h-2"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <strong>Superior Sync</strong>
+        <span id="brandTagline">Peer-to-peer file sync</span>
+      </div>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-actions">
+        <button class="ghost-icon" id="themeBtn" type="button">
+          <span id="themeIcon"></span><span id="themeLabel"></span>
+        </button>
+        <button class="ghost-icon" id="langBtn" type="button">
+          <span id="langIcon"></span><span id="langLabel"></span>
+        </button>
+      </div>
+      <div class="user-chip" id="userChip"></div>
+    </div>
+  </aside>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="main-wrap">
+    <header class="topbar" id="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation"></button>
+      <div class="topbar-title" id="topbarTitle"></div>
+      <div class="topbar-actions" id="topbarActions"></div>
+    </header>
+    <main class="main" id="main" tabindex="-1"></main>
+  </div>
+</div>
+
+<div class="drop-overlay" id="dropOverlay" aria-hidden="true">
+  <div class="drop-zone">
+    <span id="dropIcon"></span>
+    <h3 id="dropTitle"></h3>
+    <p id="dropHint"></p>
+  </div>
+</div>
+
+<div class="toast-stack" id="toasts" role="region" aria-live="polite" aria-label="Notifications"></div>
+<div class="modal-root" id="modalRoot" hidden aria-hidden="true"></div>
+
+<!--SS_SCRIPT-->
+</body>
+</html>
